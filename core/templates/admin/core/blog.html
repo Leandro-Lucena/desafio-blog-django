@@ -1,0 +1,19 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h1>Listagem de todos os Posts e Tags do sistema</h1>
+
+  <h2>Posts</h2>
+  <ul>
+    {% for post in posts %}
+      <li>{{ post.title }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Tags</h2>
+  <ul>
+    {% for tag in tags %}
+      <li>{{ tag.name }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
